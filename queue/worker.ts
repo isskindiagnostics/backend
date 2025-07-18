@@ -37,7 +37,7 @@ const worker = new Worker(
     await jobRef.update({ status: 'processing' });
 
     try {
-       // Converte a imagem, que veio codificada em base64, para um Buffer (formato de arquivo em memória). 
+      // Converte a imagem, que veio codificada em base64, para um Buffer (formato de arquivo em memória).
       const buffer = Buffer.from(image, 'base64');
 
       const ext = mimeType === 'image/png' ? 'png' : 'jpg'; // Decide a extensão da imagem (png ou jpg) para salvar o arquivo.
@@ -110,7 +110,7 @@ const worker = new Worker(
       });
     }
   },
-  { connection, concurrency: 6 } // O worker é configurado para rodar até 6 jobs em paralelo (concurrency = 6).
+  { connection, concurrency: 3 } // O worker é configurado para rodar até 3 jobs em paralelo.
 );
 // Imprime no console que o worker está rodando.
 console.log('Worker is running...');

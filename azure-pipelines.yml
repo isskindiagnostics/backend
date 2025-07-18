@@ -40,6 +40,16 @@ steps:
     displayName: "Check Docker Compose version"
 
   - script: |
+      echo "FIREBASE_CREDENTIAL=$(FIREBASE_CREDENTIAL)" > .env
+      echo "REDIS_HOST=$(REDIS_HOST)" >> .env
+      echo "FIREBASE_STORAGE_BUCKET=$(FIREBASE_STORAGE_BUCKET)" >> .env
+    displayName: "Create .env file"
+    env:
+      FIREBASE_CREDENTIAL: $(FIREBASE_CREDENTIAL)
+      REDIS_HOST: $(REDIS_HOST)
+      FIREBASE_STORAGE_BUCKET: $(FIREBASE_STORAGE_BUCKET)
+
+  - script: |
       echo "Validating docker compose file..."
       docker compose -f $(COMPOSE_FILE) config
     displayName: "Validate docker compose syntax"

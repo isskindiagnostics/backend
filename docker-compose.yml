@@ -14,6 +14,7 @@ services:
       - redis
     environment:
       PYTHONUNBUFFERED: 1 # helps with log streaming
+    env_file: .env
 
   node-api:
     build: ./queue

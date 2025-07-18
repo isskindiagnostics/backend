@@ -27,7 +27,7 @@ app.add_middleware(
 model_binary = YOLO("models/isskin-binary-11l-v1.pt")
 model_dx = YOLO("models/isskin-dx-11l-v1.pt")
 
-# Função para redimensionar a imagem para 640x640 pixels, mantendo a proporção e preenchendo com cor cinza para manter o tamanho fixo (requisito do YOLO).
+# Função para redimensionar a imagem para 640x640 pixels, mantendo a proporção e preenchendo com cor preta para manter o tamanho fixo (requisito do YOLO).
 def letterbox_image(image, size=(640, 640)): 
     iw, ih = image.size
     w, h = size
@@ -36,7 +36,7 @@ def letterbox_image(image, size=(640, 640)):
     nh = int(ih * scale)
 
     image = image.resize((nw, nh), Image.BICUBIC)
-    new_image = Image.new('RGB', size, (128, 128, 128))
+    new_image = Image.new('RGB', size, (0, 0, 0))
     new_image.paste(image, ((w - nw) // 2, (h - nh) // 2))
     return new_image
 

@@ -19,19 +19,22 @@ steps:
   - task: DockerInstaller@0
     displayName: Install Docker
 
+  - script: docker compose version
+    displayName: "Check Docker Compose version"
+
   - script: |
-      echo "Validating docker-compose file..."
-      docker-compose -f $(COMPOSE_FILE) config
-    displayName: "Validate docker-compose syntax"
+      echo "Validating docker compose file..."
+      docker compose -f $(COMPOSE_FILE) config
+    displayName: "Validate docker compose syntax"
 
   - script: |
       echo "Building all services..."
-      docker-compose -f $(COMPOSE_FILE) build --no-cache
+      docker compose -f $(COMPOSE_FILE) build --no-cache
     displayName: "Build all Docker services"
 
   - script: |
       echo "Starting services..."
-      docker-compose -f $(COMPOSE_FILE) up -d
+      docker compose -f $(COMPOSE_FILE) up -d
     displayName: "Start containers (for test)"
 
   - script: |
@@ -45,8 +48,8 @@ steps:
 
   - script: |
       echo "Stopping test containers..."
-      docker-compose -f $(COMPOSE_FILE) down
-    displayName: "Cleanup (docker-compose down)"
+      docker compose -f $(COMPOSE_FILE) down
+    displayName: "Cleanup (docker compose down)"
 
   - task: AzureWebAppContainer@1
     displayName: "Deploy to Azure Web App (Docker Compose)"

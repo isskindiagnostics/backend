@@ -1,15 +1,15 @@
-import { Queue } from 'bullmq';
-import dotenv from 'dotenv';
+import { Queue } from 'bullmq'; // Importa o Queue para criar filas de trabalho.
+import dotenv from 'dotenv'; // Importa dotenv para carregar variáveis de ambiente do arquivo .env.
 
 dotenv.config();
 
-// Conexão com Redis (usado pela fila BullMQ)
+// Define a conexão com o Redis: o host vem do .env ou assume redis (nome do container Redis no Docker).
 export const connection = {
-  host: process.env.REDIS_HOST || 'redis', // nome do serviço no docker-compose
+  host: process.env.REDIS_HOST || 'redis',
   port: 6379,
 };
 
-// Define a fila BullMQ chamada "image-analysis"
+// Cria e exporta a fila chamada image-analysis usando essa conexão.
 export const analysisQueue = new Queue('image-analysis', {
   connection,
   defaultJobOptions: {

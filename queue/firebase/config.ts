@@ -1,4 +1,4 @@
-import { initializeApp, cert, App } from 'firebase-admin/app';
+import { initializeApp, cert, App } from 'firebase-admin/app'; 
 import { getFirestore } from 'firebase-admin/firestore';
 import { getStorage } from 'firebase-admin/storage';
 import dotenv from 'dotenv';

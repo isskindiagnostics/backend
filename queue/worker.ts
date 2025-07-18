@@ -69,7 +69,7 @@ const worker = new Worker(
 
       // Envia a imagem para o FastAPI na rota /predict/ para rodar a análise.
       const response = await axios.post(
-        'http://python-backend:8000/predict/',
+        'http://python-backend:80/predict/',
         form,
         {
           headers: form.getHeaders(),

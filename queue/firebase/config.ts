@@ -5,8 +5,12 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+const firebaseConfig = JSON.parse(
+  Buffer.from(process.env.FIREBASE_CREDENTIAL!, 'base64').toString('utf8')
+);
+
 const app: App = initializeApp({
-  credential: cert(JSON.parse(process.env.FIREBASE_CREDENTIAL as string)),
+  credential: cert(firebaseConfig),
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
 });
 

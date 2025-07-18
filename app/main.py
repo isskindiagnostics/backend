@@ -1,32 +1,33 @@
 import os
-from fastapi import FastAPI, UploadFile, File
-from fastapi.middleware.cors import CORSMiddleware
-from PIL import Image
+from fastapi import FastAPI, UploadFile, File # FastAPI para criar a API.
+from fastapi.middleware.cors import CORSMiddleware # CORS para liberar acesso da aplicação frontend.
+from PIL import Image # PIL (Python Imaging Library) para abrir e processar imagens.
 import io
-import psutil
-import torch
-from torchvision import transforms
+import torch # torch e ultralytics para rodar os modelos YOLO.
 from ultralytics import YOLO 
-from dotenv import load_dotenv
+from dotenv import load_dotenv 
 
 load_dotenv() 
 
+# Cria o app FastAPI.
 app = FastAPI()
 
-URLS = os.getenv("FRONTEND_URLS", "http://localhost:3000").split(",")
+URLS = os.getenv("FRONTEND_URLS")
 
+# Carrega URLs permitidas para CORS (por enquanto “*” permite tudo, isso deve mudar em produção).
 app.add_middleware(
-    CORSMiddleware,
+    CORSMiddleware, # Configura o CORS para permitir que seu frontend acesse o backend.
     allow_origins=["*"], # altera pra URL depois!!!!
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Load both models
+# Carrega os dois modelos YOLO previamente treinados (arquivo .pt).
 model_binary = YOLO("models/isskin-binary-11l-v1.pt")
 model_dx = YOLO("models/isskin-dx-11l-v1.pt")
 
+# Função para redimensionar a imagem para 640x640 pixels, mantendo a proporção e preenchendo com cor preta para manter o tamanho fixo (requisito do YOLO).
 def letterbox_image(image, size=(640, 640)): 
     iw, ih = image.size
     w, h = size
@@ -35,21 +36,24 @@ def letterbox_image(image, size=(640, 640)):
     nh = int(ih * scale)
 
     image = image.resize((nw, nh), Image.BICUBIC)
-    new_image = Image.new('RGB', size, (128, 128, 128))
+    new_image = Image.new('RGB', size, (0, 0, 0))
     new_image.paste(image, ((w - nw) // 2, (h - nh) // 2))
     return new_image
 
+# Função para converter bytes da imagem em tensor pronto para o modelo.
 def preprocess_image(image_bytes):
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
     image = letterbox_image(image, size=(640, 640))
     return image
 
+# Rota GET /ram que retorna quanta memória RAM está sendo usada (em MB).
 @app.get("/ram")
 def get_ram_usage():
     import psutil, os
     ram = psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
     return {"ram": round(ram, 2)}
 
+# Rota POST /predict/ que recebe uma imagem, lê ela, roda as duas predições (binary e dx) e retorna os resultados na resposta JSON.
 @app.post("/predict/")
 async def predict(file: UploadFile = File(...)):
     image_bytes = await file.read()

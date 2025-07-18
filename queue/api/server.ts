@@ -13,9 +13,9 @@ const upload = multer({ storage: multer.memoryStorage() });
 // Define tipos permitidos de imagens (jpeg e png).
 const allowedMimeTypes = ['image/jpeg', 'image/png', 'image/jpg'];
 
-// Cria o servidor express e define a porta 3001.
+// Cria o servidor express e define a porta 80.
 const app = express();
-const PORT = 3001;
+const PORT = 80;
 
 // Cria a rota POST /analyze para receber uma imagem.
 // Usa multer para pegar o arquivo enviado no campo image.

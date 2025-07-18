@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  redis:
+    image: redis:6
+    ports:
+      - "6379:6379"
+
+  python-backend:
+    build: ./app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+    environment:
+      PYTHONUNBUFFERED: 1 # helps with log streaming
+
+  node-api:
+    build: ./queue
+    command: node dist/api/server.js
+    ports:
+      - "3001:3001"
+    environment:
+      REDIS_HOST: redis
+      FIREBASE_CREDENTIAL: ${FIREBASE_CREDENTIAL}
+    env_file: .env
+    depends_on:
+      - redis
+      - python-backend
+
+  node-worker:
+    build: ./queue
+    command: node dist/worker.js
+    environment:
+      REDIS_HOST: redis
+      FIREBASE_CREDENTIAL: ${FIREBASE_CREDENTIAL}
+    env_file: .env
+    depends_on:
+      - redis
+      - python-backend

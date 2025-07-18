@@ -8,8 +8,8 @@ services:
 
   python-backend:
     build: ./app
-    ports:
-      - "8000:8000"
+    # ports:
+    #   - "8000:8000"
     depends_on:
       - redis
     environment:
@@ -20,7 +20,7 @@ services:
     build: ./queue
     command: node dist/api/server.js
     ports:
-      - "3001:3001"
+      - "80:80"
     environment:
       REDIS_HOST: redis
       FIREBASE_CREDENTIAL: ${FIREBASE_CREDENTIAL}

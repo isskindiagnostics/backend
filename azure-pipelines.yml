@@ -7,8 +7,8 @@ pool:
   vmImage: "ubuntu-latest"
 
 variables:
-  - group: issskin-secrets
-  - group: registry-creds
+  - group: acr-secrets
+  - group: docker-secrets
   - name: COMPOSE_FILE
     value: docker-compose.yml
   - name: NODE_API_URL

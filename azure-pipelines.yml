@@ -21,10 +21,10 @@ steps:
     displayName: "Use Python"
 
   - script: |
-      echo "Installing Docker Engine"
-      sudo apt-get update
-      sudo apt-get install -y docker.io
-    displayName: "Install Docker Engine"
+      echo "Installing Docker Engine using official Docker install script..."
+      curl -fsSL https://get.docker.com | sudo sh
+      docker --version
+    displayName: "Install Docker Engine (official script)"
 
   - script: |
       echo "Installing Docker Compose v2"

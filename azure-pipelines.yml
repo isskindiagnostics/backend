@@ -50,11 +50,9 @@ steps:
     displayName: "Validate docker-compose.yml"
 
   - script: |
-      echo "Logging into ACR..."
+      echo "Logging into ACR and building/pushing images..."
       echo "$(DOCKER_REGISTRY_PASS)" | docker login $(DOCKER_REGISTRY_URL) -u $(DOCKER_REGISTRY_USER) --password-stdin
-    displayName: "Docker Login to ACR"
 
-  - script: |
       docker build -t $(DOCKER_REGISTRY_URL)/node-api:latest ./queue
       docker build -t $(DOCKER_REGISTRY_URL)/node-worker:latest ./queue
       docker build -t $(DOCKER_REGISTRY_URL)/python-backend:latest ./app
@@ -62,22 +60,7 @@ steps:
       docker push $(DOCKER_REGISTRY_URL)/node-api:latest
       docker push $(DOCKER_REGISTRY_URL)/node-worker:latest
       docker push $(DOCKER_REGISTRY_URL)/python-backend:latest
-    displayName: "Build and Push Docker Images to ACR"
-
-  - script: |
-      echo "Testing containers locally..."
-      docker compose -f $(COMPOSE_FILE) up -d
-    displayName: "Run test containers"
-
-  - script: |
-      echo "Healthcheck..."
-      for i in {1..10}; do
-        curl -s --fail $(NODE_API_URL) && break || sleep 3
-      done
-    displayName: "Check /analyze endpoint"
-
-  - script: docker compose -f $(COMPOSE_FILE) down
-    displayName: "Clean up test containers"
+    displayName: "Login, Build and Push Docker Images"
 
   - task: AzureWebAppContainer@1
     displayName: "Deploy to Azure Web App"

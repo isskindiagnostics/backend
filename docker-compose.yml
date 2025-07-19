@@ -7,7 +7,7 @@ services:
     #   - "6379:6379"
 
   python-backend:
-    build: ./app
+    image: isskinregistry.azurecr.io/python-backend:latest
     # ports:
     #   - "8000:8000"
     depends_on:
@@ -17,20 +17,21 @@ services:
     env_file: .env
 
   node-api:
-    build: ./queue
+    image: isskinregistry.azurecr.io/node-api:latest
     command: node dist/api/server.js
     ports:
       - "80:80"
     environment:
       REDIS_HOST: redis
       FIREBASE_CREDENTIAL: ${FIREBASE_CREDENTIAL}
+      WEBSITES_PORT: 80
     env_file: .env
     depends_on:
       - redis
       - python-backend
 
   node-worker:
-    build: ./queue
+    image: isskinregistry.azurecr.io/node-worker:latest
     command: node dist/worker.js
     environment:
       REDIS_HOST: redis

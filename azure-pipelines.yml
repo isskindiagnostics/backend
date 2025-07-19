@@ -7,8 +7,12 @@ pool:
   vmImage: "ubuntu-latest"
 
 variables:
-  COMPOSE_FILE: docker-compose.yml
-  NODE_API_URL: http://localhost:80/analyze
+  - group: issskin-secrets
+  - group: registry-creds
+  - name: COMPOSE_FILE
+    value: docker-compose.yml
+  - name: NODE_API_URL
+    value: http://localhost:80/analyze
 
 steps:
   - task: UsePythonVersion@0
@@ -17,71 +21,70 @@ steps:
     displayName: "Use Python"
 
   - script: |
-      echo "Installing Docker Engine 20.10+"
+      echo "Installing Docker Engine"
       sudo apt-get update
-      sudo apt-get remove -y docker docker-engine docker.io containerd runc || true
-      sudo apt-get install -y ca-certificates curl gnupg lsb-release
-      curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-      echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-      sudo apt-get update
-      sudo apt-get install -y docker-ce docker-ce-cli containerd.io
-      docker --version
-    displayName: "Install latest Docker Engine"
+      sudo apt-get install -y docker.io
+    displayName: "Install Docker Engine"
 
   - script: |
-      echo "Installing Docker Compose v2 (plugin)..."
+      echo "Installing Docker Compose v2"
       mkdir -p ~/.docker/cli-plugins
       curl -SL https://github.com/docker/compose/releases/download/v2.24.5/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
       chmod +x ~/.docker/cli-plugins/docker-compose
       docker compose version
     displayName: "Install Docker Compose v2"
 
-  - script: docker compose version
-    displayName: "Check Docker Compose version"
-
   - script: |
       echo "FIREBASE_CREDENTIAL=$(FIREBASE_CREDENTIAL)" > .env
       echo "REDIS_HOST=$(REDIS_HOST)" >> .env
       echo "FIREBASE_STORAGE_BUCKET=$(FIREBASE_STORAGE_BUCKET)" >> .env
+      echo "FRONTEND_URLS=$(FRONTEND_URLS)" >> .env
     displayName: "Create .env file"
     env:
       FIREBASE_CREDENTIAL: $(FIREBASE_CREDENTIAL)
       REDIS_HOST: $(REDIS_HOST)
       FIREBASE_STORAGE_BUCKET: $(FIREBASE_STORAGE_BUCKET)
+      FRONTEND_URLS: $(FRONTEND_URLS)
+
+  - script: docker compose -f $(COMPOSE_FILE) config
+    displayName: "Validate docker-compose.yml"
 
   - script: |
-      echo "Validating docker compose file..."
-      docker compose -f $(COMPOSE_FILE) config
-    displayName: "Validate docker compose syntax"
+      echo "$(DOCKER_REGISTRY_PASS)" | docker login $(DOCKER_REGISTRY_URL) -u $(DOCKER_REGISTRY_USER) --password-stdin
+
+      docker build -t $(DOCKER_REGISTRY_URL)/node-api:latest ./queue
+      docker build -t $(DOCKER_REGISTRY_URL)/node-worker:latest ./queue
+      docker build -t $(DOCKER_REGISTRY_URL)/python-backend:latest ./app
+
+      docker push $(DOCKER_REGISTRY_URL)/node-api:latest
+      docker push $(DOCKER_REGISTRY_URL)/node-worker:latest
+      docker push $(DOCKER_REGISTRY_URL)/python-backend:latest
+    displayName: "Build and Push Docker Images to ACR"
 
   - script: |
-      echo "Building all services..."
-      docker compose -f $(COMPOSE_FILE) build --no-cache
-    displayName: "Build all Docker services"
-
-  - script: |
-      echo "Starting services..."
+      echo "Testing containers locally..."
       docker compose -f $(COMPOSE_FILE) up -d
-    displayName: "Start containers (for test)"
+    displayName: "Run test containers"
 
   - script: |
-      echo "Waiting for node-api to be ready..."
+      echo "Healthcheck..."
       for i in {1..10}; do
-        curl -s --fail $(NODE_API_URL) || sleep 3
+        curl -s --fail $(NODE_API_URL) && break || sleep 3
       done
-      echo "Node API is reachable"
-    displayName: "Healthcheck on /analyze"
-    continueOnError: false
+    displayName: "Check /analyze endpoint"
 
-  - script: |
-      echo "Stopping test containers..."
-      docker compose -f $(COMPOSE_FILE) down
-    displayName: "Cleanup (docker compose down)"
+  - script: docker compose -f $(COMPOSE_FILE) down
+    displayName: "Clean up test containers"
 
   - task: AzureWebAppContainer@1
-    displayName: "Deploy to Azure Web App (Docker Compose)"
+    displayName: "Deploy to Azure Web App"
     inputs:
       azureSubscription: "isskin-backend-connection"
       appName: "isskin-backend-app"
-      multicontainerConfigType: "Compose"
-      multicontainerConfigFile: "docker-compose.yml"
+      containers: |
+        [
+          { "name": "node-api", "image": "$(DOCKER_REGISTRY_URL)/node-api:latest" },
+          { "name": "node-worker", "image": "$(DOCKER_REGISTRY_URL)/node-worker:latest" },
+          { "name": "python-backend", "image": "$(DOCKER_REGISTRY_URL)/python-backend:latest" },
+          { "name": "redis", "image": "redis:6" }
+        ]

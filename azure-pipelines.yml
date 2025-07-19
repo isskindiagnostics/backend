@@ -50,8 +50,11 @@ steps:
     displayName: "Validate docker-compose.yml"
 
   - script: |
+      echo "Logging into ACR..."
       echo "$(DOCKER_REGISTRY_PASS)" | docker login $(DOCKER_REGISTRY_URL) -u $(DOCKER_REGISTRY_USER) --password-stdin
+    displayName: "Docker Login to ACR"
 
+  - script: |
       docker build -t $(DOCKER_REGISTRY_URL)/node-api:latest ./queue
       docker build -t $(DOCKER_REGISTRY_URL)/node-worker:latest ./queue
       docker build -t $(DOCKER_REGISTRY_URL)/python-backend:latest ./app

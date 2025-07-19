@@ -26,4 +26,4 @@ ENV PYTORCH_MULTIPROCESSING_START_METHOD=spawn
 ENV PYTORCH_DISABLE_MKLDNN=1
 ENV PYTHONUNBUFFERED=1
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

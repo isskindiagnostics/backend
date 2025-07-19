@@ -67,10 +67,6 @@ steps:
     inputs:
       azureSubscription: "isskin-backend-connection"
       appName: "isskin-backend-app"
-      containers: |
-        [
-          { "name": "node-api", "image": "$(DOCKER_REGISTRY_URL)/node-api:latest" },
-          { "name": "node-worker", "image": "$(DOCKER_REGISTRY_URL)/node-worker:latest" },
-          { "name": "python-backend", "image": "$(DOCKER_REGISTRY_URL)/python-backend:latest" },
-          { "name": "redis", "image": "redis:6" }
-        ]
+      dockerComposeFile: "$(COMPOSE_FILE)"
+      multiContainerConfigType: "compose"
+

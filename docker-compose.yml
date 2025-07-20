@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   redis:
     image: redis:6
@@ -7,7 +5,7 @@ services:
     #   - "6379:6379"
 
   python-backend:
-    image: isskinregistry.azurecr.io/python-backend:latest
+    image: isskinbackendregistry.azurecr.io/python-backend:latest
     # ports:
     #   - "8000:8000"
     depends_on:
@@ -17,7 +15,7 @@ services:
     env_file: .env
 
   node-api:
-    image: isskinregistry.azurecr.io/node-api:latest
+    image: isskinbackendregistry.azurecr.io/node-api:latest
     command: node dist/api/server.js
     ports:
       - "80:80"
@@ -31,7 +29,7 @@ services:
       - python-backend
 
   node-worker:
-    image: isskinregistry.azurecr.io/node-worker:latest
+    image: isskinbackendregistry.azurecr.io/node-worker:latest
     command: node dist/worker.js
     environment:
       REDIS_HOST: redis

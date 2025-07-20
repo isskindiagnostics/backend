@@ -5,7 +5,7 @@ services:
     #   - "6379:6379"
 
   python-backend:
-    image: ${DOCKER_REGISTRY_URL}/python-backend:latest
+    image: $${DOCKER_REGISTRY_URL}/python-backend:latest
     # ports:
     #   - "8000:8000"
     depends_on:
@@ -15,7 +15,7 @@ services:
     env_file: .env
 
   node-api:
-    image: ${DOCKER_REGISTRY_URL}/node-api:latest
+    image: $${DOCKER_REGISTRY_URL}/node-api:latest
     command: node dist/api/server.js
     ports:
       - "80:80"
@@ -29,11 +29,11 @@ services:
       - python-backend
 
   node-worker:
-    image: ${DOCKER_REGISTRY_URL}/node-worker:latest
+    image: $${DOCKER_REGISTRY_URL}/node-worker:latest
     command: node dist/worker.js
     environment:
       REDIS_HOST: redis
-      FIREBASE_CREDENTIAL: ${FIREBASE_CREDENTIAL}
+      FIREBASE_CREDENTIAL: $${FIREBASE_CREDENTIAL}
     env_file: .env
     depends_on:
       - redis

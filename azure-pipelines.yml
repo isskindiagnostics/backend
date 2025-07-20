@@ -80,6 +80,21 @@ steps:
       grep '\${' docker-compose.deploy.yml && echo "❌ Unresolved vars found!" && exit 1 || echo "✅ All variables substituted."
     displayName: "Show and validate docker-compose.deploy.yml"
 
+  - task: AzureCLI@2
+    displayName: "Upload docker-compose.deploy.yml to App Service"
+    inputs:
+      azureSubscription: "isskin-backend-connection"
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: |
+        echo "Uploading docker-compose.deploy.yml to App Service..."
+        az webapp config container set \
+          --resource-group isskin-backend \
+          --name isskin-backend-app \
+          --multicontainer-config-type compose \
+          --multicontainer-config-file docker-compose.deploy.yml
+
+
   - task: AzureWebAppContainer@1
     displayName: "Deploy to Azure Web App"
     inputs:

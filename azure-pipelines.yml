@@ -62,11 +62,15 @@ steps:
       docker push $(DOCKER_REGISTRY_URL)/python-backend:latest
     displayName: "Login, Build and Push Docker Images"
 
+  - script: |
+      echo "Substituting variables into docker-compose.yml..."
+      sed "s|\${DOCKER_REGISTRY_URL}|$(DOCKER_REGISTRY_URL)|g" docker-compose.yml > docker-compose.deploy.yml
+    displayName: "Prepare docker-compose.deploy.yml"
+
   - task: AzureWebAppContainer@1
     displayName: "Deploy to Azure Web App"
     inputs:
       azureSubscription: "isskin-backend-connection"
       appName: "isskin-backend-app"
-      dockerComposeFile: "$(COMPOSE_FILE)"
+      dockerComposeFile: "docker-compose.deploy.yml"
       multiContainerConfigType: "compose"
-

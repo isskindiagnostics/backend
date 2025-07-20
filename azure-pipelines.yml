@@ -95,10 +95,10 @@ steps:
           --multicontainer-config-file docker-compose.deploy.yml
 
 
-  - task: AzureWebAppContainer@1
-    displayName: "Deploy to Azure Web App"
-    inputs:
-      azureSubscription: "isskin-backend-connection"
-      appName: "isskin-backend-app"
-      dockerComposeFile: "docker-compose.deploy.yml"
-      multiContainerConfigType: "compose"
+  # - task: AzureWebAppContainer@1
+  #   displayName: "Deploy to Azure Web App"
+  #   inputs:
+  #     azureSubscription: "isskin-backend-connection"
+  #     appName: "isskin-backend-app"
+  #     dockerComposeFile: "docker-compose.deploy.yml"
+  #     multiContainerConfigType: "compose"

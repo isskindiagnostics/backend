@@ -2,7 +2,6 @@
 
 This repository contains the complete backend of the image analysis application for dermatological detection of skin cancer. We use FastAPI with YOLOv11 models for inference, Next.js (API Routes) with BullMQ for queue orchestration, Redis as a broker, Firebase as a database, and Docker Compose for local orchestration and deployment on Azure App Service.
 
-
 ## 📦 Tech Stack
 
 The backend is composed of different technologies working together across layers. Here's a breakdown of what each component does:
@@ -16,8 +15,6 @@ The backend is composed of different technologies working together across layers
 | Storage     | **Firebase Storage**                  | Saves the original user-uploaded images                                   |
 | Deployment  | **Docker Compose, Azure App Service** | Containerizes and orchestrates the entire backend infrastructure          |
 | Monitoring  | **RAM Route (/ram)**                  | Allows basic resource monitoring (especially memory) to enable throttling |
-
-
 
 ## 🚀 How to run locally
 
@@ -47,26 +44,34 @@ FIREBASE_CREDENTIAL=
 docker compose up --build
 ```
 
-This command starts:
+4. Access the Node.js API from your frontend or tools at:
 
-- Next.js (API): http://localhost:3000
-- FastAPI: http://localhost:8000/docs
+```bash
+http://localhost:3001/analyze
+```
 
+Since the Node.js API is the main entrypoint the frontend talks to, it listens on port 3001.
 
-4. Use Postman or another tool to send POST requests to the Next.js API and monitor the response flow.
+4. Use Postman or another tool to send POST requests to the API and monitor the response flow. If you prefer, you can also test it with curl:
 
+```bash
+curl -X POST http://localhost:3001/analyze -F "image=@/path/to/image.jpg"
+```
 
 ## 📸 Application Flow
 
 This is how your image travels through the system, step by step:
 
 #### User Upload
+
 The frontend sends an image to the Next.js API Route.
 
 #### Queueing
+
 The API doesn't handle the image directly. Instead, it creates a job and pushes it to a BullMQ queue, which is stored in Redis.
 
 #### Worker Processing
+
 A Node.js worker listens for new jobs in the queue. When it finds one:
 
 It first checks the available memory on the Python server (to avoid overloading).
@@ -74,9 +79,11 @@ It first checks the available memory on the Python server (to avoid overloading)
 If memory is fine, it sends the image to FastAPI.
 
 #### Inference (FastAPI)
+
 FastAPI receives the image and runs YOLOv11 to perform predictions.
 
 #### Saving Results
+
 Once the analysis is done:
 
 The image is stored in Firebase Storage.
@@ -84,10 +91,11 @@ The image is stored in Firebase Storage.
 The results and status (done, error, etc.) are saved in Firestore.
 
 #### Frontend Update
+
 The frontend fetches the job status from Firestore using the jobId originally returned, and displays the result when it's ready.
 
-
 # 📁 Folder Structure
+
 ```bash
 app/                      # Python service (FastAPI + YOLOv11)
 ├── models/               # Trained YOLOv11 models
@@ -126,5 +134,5 @@ defaultJobOptions: {
   }
 }
 ```
-This keeps the system stable and memory-efficient, especially when dealing with large job volumes.
 
+This keeps the system stable and memory-efficient, especially when dealing with large job volumes.

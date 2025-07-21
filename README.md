@@ -38,6 +38,16 @@ FIREBASE_STORAGE_BUCKET=
 FIREBASE_CREDENTIAL=
 ```
 
+To generate Firebase credentials, simply navigate to the Service Accounts section under your project settings and download the JSON credentials file. Since the deployment require the credentials in Base64 format, you can convert the downloaded JSON file by running the following command in your terminal:
+
+```bash
+base64 -i yourfile.json
+```
+
+This command will output the Base64-encoded version of your Firebase credentials, which you can then paste on your `.env`.
+
+Also, your `FIREBASE_STORAGE_BUCKET` should not include the `gs://` prefix.
+
 3. Start the Services:
 
 ```bash

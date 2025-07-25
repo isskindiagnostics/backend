@@ -4,6 +4,7 @@ import { analysisQueue } from '../queue'; // Importa a fila analysisQueue.
 import { v4 as uuidv4 } from 'uuid'; // Importa uuidv4 para criar ids únicos para os jobs.
 import dotenv from 'dotenv'; // Importa as configurações do Firebase.
 import { db } from '../firebase/config'; // Carrega variáveis de ambiente e mostra no console o nome do bucket do Firebase.
+import cors from 'cors';
 
 dotenv.config();
 
@@ -13,9 +14,10 @@ const upload = multer({ storage: multer.memoryStorage() });
 // Define tipos permitidos de imagens (jpeg e png).
 const allowedMimeTypes = ['image/jpeg', 'image/png', 'image/jpg'];
 
-// Cria o servidor express e define a porta 80.
+// Cria o servidor express e define a porta 3001.
 const app = express();
-const PORT = 80;
+app.use(cors({ origin: 'http://localhost:3000' }));
+const PORT = 3001;
 
 // Cria a rota POST /analyze para receber uma imagem.
 // Usa multer para pegar o arquivo enviado no campo image.

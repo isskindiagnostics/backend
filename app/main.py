@@ -17,7 +17,7 @@ URLS = os.getenv("FRONTEND_URLS")
 # Carrega URLs permitidas para CORS (por enquanto “*” permite tudo, isso deve mudar em produção).
 app.add_middleware(
     CORSMiddleware, # Configura o CORS para permitir que seu frontend acesse o backend.
-    allow_origins=["*"], # altera pra URL depois!!!!
+    allow_origins=["http://localhost:3000"], # altera pra URL depois!!!!
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

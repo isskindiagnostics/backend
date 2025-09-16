@@ -1,0 +1,24 @@
+RELATÓRIO DE PROCESSAMENTO DO DATASET DE TESTE
+==================================================
+
+Data/Hora: 2025-09-10 13:17:21.857347
+Imagens solicitadas: 306
+Imagens encontradas no metadata: 306
+Imagens processadas com sucesso: 306
+Imagens ignoradas: 0
+
+DISTRIBUIÇÃO DOS DADOS:
+--------------------
+Binary:
+  benign: 194
+  malignant: 112
+
+Dx:
+  nevus: 138
+  scc: 50
+  seborrheic_keratosis: 46
+  bcc: 43
+  melanoma: 11
+  ak: 8
+  df: 6
+  vasc: 4

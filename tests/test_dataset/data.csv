@@ -1,0 +1,307 @@
+image,binary,dx,clinical_impression_1,clinical_impression_2,clinical_impression_3
+s-prd-398966642.jpg,malignant,scc,7-malignant-bcc,6-benign-other,1-benign-melanocytic nevus
+s-prd-401872340.jpg,malignant,scc,8-malignant-scc,6-benign-other,
+s-prd-450517936.jpg,malignant,bcc,7-malignant-bcc,6-benign-other,
+s-prd-401878455.jpg,malignant,scc,8-malignant-scc,2-benign-seborrheic keratosis,
+s-prd-401900819.jpg,malignant,scc,8-malignant-scc,2-benign-seborrheic keratosis,
+s-prd-401919763.jpg,malignant,bcc,7-malignant-bcc,,
+s-prd-404359630.jpg,benign,nevus,7-malignant-bcc,2-benign-seborrheic keratosis,1-benign-melanocytic nevus
+s-prd-404359958.jpg,benign,nevus,7-malignant-bcc,2-benign-seborrheic keratosis,1-benign-melanocytic nevus
+s-prd-404492413.jpg,malignant,scc,8-malignant-scc,11-malignant-melanoma,
+s-prd-404494087.jpg,malignant,scc,8-malignant-scc,11-malignant-melanoma,
+s-prd-421708723.jpg,malignant,scc,8-malignant-scc,9-malignant-sccis,10-malignant-ak
+s-prd-421709193.jpg,malignant,bcc,7-malignant-bcc,8-malignant-scc,
+s-prd-421709225.jpg,malignant,scc,8-malignant-scc,7-malignant-bcc,
+s-prd-421710039.jpg,benign,seborrheic_keratosis,9-malignant-sccis,8-malignant-scc,10-malignant-ak
+s-prd-421727395.jpg,malignant,scc,8-malignant-scc,7-malignant-bcc,9-malignant-sccis
+s-prd-491433744.jpg,malignant,bcc,7-malignant-bcc,,
+s-prd-491434213.jpg,malignant,bcc,7-malignant-bcc,,
+s-prd-491435292.jpg,malignant,scc,9-malignant-sccis,10-malignant-ak,
+s-prd-491437241.jpg,malignant,scc,8-malignant-scc,9-malignant-sccis,7-malignant-bcc
+s-prd-491444015.jpg,malignant,bcc,7-malignant-bcc,,
+s-prd-491445225.jpg,malignant,scc,8-malignant-scc,9-malignant-sccis,7-malignant-bcc
+s-prd-578695623.jpg,malignant,scc,8-malignant-scc,9-malignant-sccis,10-malignant-ak
+s-prd-578697248.jpg,malignant,scc,8-malignant-scc,9-malignant-sccis,10-malignant-ak
+s-prd-663807708.jpg,malignant,scc,7-malignant-bcc,8-malignant-scc,
+s-prd-408906828.jpg,malignant,scc,6-benign-other,8-malignant-scc,10-malignant-ak
+s-prd-431483265.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,,
+s-prd-431483494.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,,
+s-prd-409352968.jpg,malignant,bcc,7-malignant-bcc,3-benign-fibrous papule,
+s-prd-411353669.jpg,malignant,ak,9-malignant-sccis,10-malignant-ak,
+s-prd-409368117.jpg,malignant,scc,9-malignant-sccis,10-malignant-ak,
+s-prd-409368540.jpg,malignant,scc,9-malignant-sccis,10-malignant-ak,
+s-prd-409368871.jpg,malignant,scc,9-malignant-sccis,10-malignant-ak,
+s-prd-411756609.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-411757161.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-411758161.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-554125143.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-554125261.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-554125753.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-618851133.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-618853435.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-411748380.jpg,benign,nevus,1-benign-melanocytic nevus,,
+s-prd-411864446.jpg,malignant,bcc,9-malignant-sccis,10-malignant-ak,
+s-prd-411865762.jpg,malignant,scc,9-malignant-sccis,2-benign-seborrheic keratosis,
+s-prd-463162168.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,
+s-prd-463162299.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,
+s-prd-463162359.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,
+s-prd-411891004.jpg,benign,nevus,1-benign-melanocytic nevus,,
+s-prd-416761910.jpg,malignant,bcc,9-malignant-sccis,10-malignant-ak,7-malignant-bcc
+s-prd-416762407.jpg,malignant,bcc,9-malignant-sccis,10-malignant-ak,7-malignant-bcc
+s-prd-501794328.jpg,malignant,bcc,7-malignant-bcc,9-malignant-sccis,6-benign-other
+s-prd-501794903.jpg,malignant,bcc,7-malignant-bcc,,
+s-prd-501801126.jpg,malignant,bcc,7-malignant-bcc,,
+s-prd-416792344.jpg,malignant,scc,8-malignant-scc,7-malignant-bcc,
+s-prd-416792893.jpg,malignant,scc,8-malignant-scc,7-malignant-bcc,
+s-prd-416793720.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,7-malignant-bcc
+s-prd-416813195.jpg,malignant,bcc,7-malignant-bcc,11-malignant-melanoma,8-malignant-scc
+s-prd-416815013.jpg,malignant,bcc,7-malignant-bcc,11-malignant-melanoma,8-malignant-scc
+s-prd-416822048.jpg,malignant,scc,8-malignant-scc,6-benign-other,
+s-prd-418830150.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,,
+s-prd-418830458.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,,
+s-prd-418876279.jpg,malignant,bcc,7-malignant-bcc,,
+s-prd-419233790.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,11-malignant-melanoma
+s-prd-419234406.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,11-malignant-melanoma
+s-prd-419235426.jpg,benign,seborrheic_keratosis,6-benign-other,2-benign-seborrheic keratosis,9-malignant-sccis
+s-prd-419238029.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,11-malignant-melanoma
+s-prd-420010479.jpg,malignant,scc,9-malignant-sccis,8-malignant-scc,10-malignant-ak
+s-prd-420057346.jpg,malignant,scc,10-malignant-ak,9-malignant-sccis,8-malignant-scc
+s-prd-420074815.jpg,benign,nevus,1-benign-melanocytic nevus,"13-other-melanocytic lesion with possible re-excision (severe/spitz nevus, aimp)",11-malignant-melanoma
+s-prd-421255812.jpg,malignant,bcc,9-malignant-sccis,7-malignant-bcc,11-malignant-melanoma
+s-prd-421323211.jpg,malignant,bcc,7-malignant-bcc,6-benign-other,
+s-prd-421323326.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,11-malignant-melanoma,
+s-prd-421323452.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,11-malignant-melanoma,
+s-prd-601685185.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,6-benign-other,11-malignant-melanoma
+s-prd-498491349.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,1-benign-melanocytic nevus,1-benign-melanocytic nevus
+s-prd-498492011.jpg,malignant,bcc,7-malignant-bcc,8-malignant-scc,9-malignant-sccis
+s-prd-498492038.jpg,malignant,bcc,7-malignant-bcc,8-malignant-scc,9-malignant-sccis
+s-prd-424123314.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-424123422.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-478008198.jpg,malignant,scc,6-benign-other,9-malignant-sccis,10-malignant-ak
+s-prd-477869754.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-424930844.jpg,benign,nevus,1-benign-melanocytic nevus,6-benign-other,1-benign-melanocytic nevus
+s-prd-426594712.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,
+s-prd-426596847.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,
+s-prd-427317938.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-595384615.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-595386156.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-595386306.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-694900208.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-429331270.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,1-benign-melanocytic nevus,1-benign-melanocytic nevus
+s-prd-426498189.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-429803735.jpg,benign,nevus,1-benign-melanocytic nevus,6-benign-other,11-malignant-melanoma
+s-prd-429803843.jpg,benign,nevus,1-benign-melanocytic nevus,6-benign-other,11-malignant-melanoma
+s-prd-429851552.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-429852369.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-431399614.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,
+s-prd-431438127.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,11-malignant-melanoma,
+s-prd-441376578.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-441376559.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-801788162.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-801788147.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-443702228.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-443701846.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-567681349.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-448028106.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-448028215.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-448067293.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-448067529.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-450548679.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-622468896.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-622468919.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-450601465.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-450601448.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-668186553.jpg,malignant,melanoma,11-malignant-melanoma,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-455937784.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-455937888.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-460200481.jpg,malignant,scc,10-malignant-ak,9-malignant-sccis,
+s-prd-462542629.jpg,malignant,bcc,7-malignant-bcc,,
+s-prd-464871179.jpg,malignant,scc,8-malignant-scc,,
+s-prd-464890165.jpg,malignant,scc,7-malignant-bcc,8-malignant-scc,9-malignant-sccis
+s-prd-464890226.jpg,malignant,scc,7-malignant-bcc,8-malignant-scc,9-malignant-sccis
+s-prd-464923148.jpg,malignant,scc,7-malignant-bcc,10-malignant-ak,
+s-prd-464926222.jpg,malignant,bcc,7-malignant-bcc,6-benign-other,
+s-prd-469801049.jpg,malignant,scc,8-malignant-scc,14-other-non-neoplastic/inflammatory/infectious,
+s-prd-470472521.jpg,malignant,bcc,7-malignant-bcc,6-benign-other,1-benign-melanocytic nevus
+s-prd-472171643.jpg,malignant,ak,8-malignant-scc,14-other-non-neoplastic/inflammatory/infectious,4-benign-dermatofibroma
+s-prd-472308526.jpg,benign,nevus,11-malignant-melanoma,1-benign-melanocytic nevus,2-benign-seborrheic keratosis
+s-prd-676848679.jpg,benign,nevus,6-benign-other,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-484588906.jpg,malignant,melanoma,2-benign-seborrheic keratosis,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-501830862.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-594093410.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-501963357.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,1-benign-melanocytic nevus,
+s-prd-505272202.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-597775974.jpg,malignant,bcc,7-malignant-bcc,9-malignant-sccis,8-malignant-scc
+s-prd-597776160.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-673785623.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,9-malignant-sccis,11-malignant-melanoma
+s-prd-673786790.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,9-malignant-sccis,11-malignant-melanoma
+s-prd-525632198.jpg,malignant,bcc,7-malignant-bcc,8-malignant-scc,
+s-prd-636476298.jpg,malignant,scc,2-benign-seborrheic keratosis,10-malignant-ak,11-malignant-melanoma
+s-prd-529714893.jpg,malignant,scc,10-malignant-ak,9-malignant-sccis,6-benign-other
+s-prd-758811816.jpg,malignant,ak,2-benign-seborrheic keratosis,11-malignant-melanoma,8-malignant-scc
+s-prd-536697895.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-636329344.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-636329752.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-540150372.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-543024167.jpg,malignant,scc,9-malignant-sccis,8-malignant-scc,10-malignant-ak
+s-prd-543024324.jpg,malignant,ak,10-malignant-ak,7-malignant-bcc,9-malignant-sccis
+s-prd-543024142.jpg,malignant,scc,9-malignant-sccis,8-malignant-scc,10-malignant-ak
+s-prd-676932736.jpg,benign,nevus,1-benign-melanocytic nevus,6-benign-other,1-benign-melanocytic nevus
+s-prd-639808889.jpg,benign,nevus,1-benign-melanocytic nevus,6-benign-other,6-benign-other
+s-prd-543163413.jpg,benign,seborrheic_keratosis,14-other-non-neoplastic/inflammatory/infectious,2-benign-seborrheic keratosis,8-malignant-scc
+s-prd-547126652.jpg,malignant,bcc,8-malignant-scc,10-malignant-ak,
+s-prd-556501111.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-560556943.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-560609036.jpg,malignant,melanoma,11-malignant-melanoma,11-malignant-melanoma,2-benign-seborrheic keratosis
+s-prd-564178611.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,6-benign-other,1-benign-melanocytic nevus
+s-prd-564834103.jpg,benign,df,6-benign-other,7-malignant-bcc,
+s-prd-564835030.jpg,benign,vasc,8-malignant-scc,7-malignant-bcc,3-benign-fibrous papule
+s-prd-755222687.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-568279358.jpg,benign,df,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-568281538.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-568312591.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-571313497.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus
+s-prd-571479386.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-574925008.jpg,benign,nevus,11-malignant-melanoma,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-582327375.jpg,malignant,melanoma,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-582396270.jpg,malignant,melanoma,11-malignant-melanoma,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-582450327.jpg,malignant,scc,8-malignant-scc,9-malignant-sccis,10-malignant-ak
+s-prd-593680698.jpg,malignant,melanoma,11-malignant-melanoma,2-benign-seborrheic keratosis,
+s-prd-600434316.jpg,malignant,bcc,11-malignant-melanoma,1-benign-melanocytic nevus,2-benign-seborrheic keratosis
+s-prd-615606602.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-619984143.jpg,malignant,ak,10-malignant-ak,9-malignant-sccis,8-malignant-scc
+s-prd-729573220.jpg,benign,nevus,1-benign-melanocytic nevus,2-benign-seborrheic keratosis,6-benign-other
+s-prd-625915357.jpg,benign,df,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-626513344.jpg,malignant,melanoma,7-malignant-bcc,11-malignant-melanoma,8-malignant-scc
+s-prd-628955225.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-628956392.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-629026106.jpg,malignant,bcc,7-malignant-bcc,9-malignant-sccis,8-malignant-scc
+s-prd-629023490.jpg,malignant,bcc,7-malignant-bcc,9-malignant-sccis,8-malignant-scc
+s-prd-629025057.jpg,malignant,bcc,7-malignant-bcc,9-malignant-sccis,8-malignant-scc
+s-prd-629031169.jpg,benign,nevus,2-benign-seborrheic keratosis,11-malignant-melanoma,
+s-prd-629529176.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-687094830.jpg,malignant,melanoma,2-benign-seborrheic keratosis,10-malignant-ak,9-malignant-sccis
+s-prd-629967824.jpg,malignant,ak,2-benign-seborrheic keratosis,9-malignant-sccis,8-malignant-scc
+s-prd-632421565.jpg,malignant,scc,8-malignant-scc,10-malignant-ak,12-malignant-other
+s-prd-632469095.jpg,malignant,melanoma,6-benign-other,2-benign-seborrheic keratosis,11-malignant-melanoma
+s-prd-632472645.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-633423757.jpg,benign,seborrheic_keratosis,1-benign-melanocytic nevus,,
+s-prd-633895660.jpg,malignant,scc,2-benign-seborrheic keratosis,9-malignant-sccis,8-malignant-scc
+s-prd-633956535.jpg,benign,nevus,1-benign-melanocytic nevus,6-benign-other,
+s-prd-636392728.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-725964916.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-650116999.jpg,benign,nevus,1-benign-melanocytic nevus,,
+s-prd-650120912.jpg,benign,nevus,1-benign-melanocytic nevus,,
+s-prd-690413259.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,
+s-prd-750182427.jpg,benign,nevus,1-benign-melanocytic nevus,,
+s-prd-640382240.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-640931309.jpg,malignant,bcc,10-malignant-ak,6-benign-other,8-malignant-scc
+s-prd-640931439.jpg,malignant,bcc,10-malignant-ak,6-benign-other,8-malignant-scc
+s-prd-640932432.jpg,malignant,bcc,10-malignant-ak,6-benign-other,8-malignant-scc
+s-prd-643139348.jpg,malignant,scc,8-malignant-scc,9-malignant-sccis,6-benign-other
+s-prd-643256510.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,11-malignant-melanoma
+s-prd-643717037.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-646588806.jpg,benign,df,4-benign-dermatofibroma,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-647201799.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-649658541.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,9-malignant-sccis,8-malignant-scc
+s-prd-649659064.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,9-malignant-sccis,8-malignant-scc
+s-prd-650204807.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,11-malignant-melanoma,
+s-prd-650205336.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,11-malignant-melanoma,
+s-prd-650207117.jpg,benign,seborrheic_keratosis,1-benign-melanocytic nevus,6-benign-other,
+s-prd-650605025.jpg,benign,nevus,11-malignant-melanoma,1-benign-melanocytic nevus,1-benign-melanocytic nevus
+s-prd-650632762.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,7-malignant-bcc,
+s-prd-650633850.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-650635003.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-650715135.jpg,benign,seborrheic_keratosis,6-benign-other,2-benign-seborrheic keratosis,11-malignant-melanoma
+s-prd-653085048.jpg,malignant,scc,6-benign-other,9-malignant-sccis,7-malignant-bcc
+s-prd-653102420.jpg,malignant,bcc,7-malignant-bcc,8-malignant-scc,2-benign-seborrheic keratosis
+s-prd-653461050.jpg,benign,vasc,5-benign-hemangioma,14-other-non-neoplastic/inflammatory/infectious,7-malignant-bcc
+s-prd-653461056.jpg,benign,vasc,5-benign-hemangioma,14-other-non-neoplastic/inflammatory/infectious,7-malignant-bcc
+s-prd-653534654.jpg,malignant,bcc,11-malignant-melanoma,1-benign-melanocytic nevus,1-benign-melanocytic nevus
+s-prd-653534980.jpg,malignant,bcc,11-malignant-melanoma,1-benign-melanocytic nevus,1-benign-melanocytic nevus
+s-prd-653535803.jpg,malignant,bcc,11-malignant-melanoma,1-benign-melanocytic nevus,1-benign-melanocytic nevus
+s-prd-654008678.jpg,benign,seborrheic_keratosis,10-malignant-ak,6-benign-other,8-malignant-scc
+s-prd-654011074.jpg,benign,seborrheic_keratosis,10-malignant-ak,6-benign-other,8-malignant-scc
+s-prd-656500950.jpg,benign,seborrheic_keratosis,7-malignant-bcc,9-malignant-sccis,6-benign-other
+s-prd-656501060.jpg,benign,seborrheic_keratosis,7-malignant-bcc,9-malignant-sccis,6-benign-other
+s-prd-660357705.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-660357805.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-660358361.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-661477081.jpg,benign,seborrheic_keratosis,1-benign-melanocytic nevus,2-benign-seborrheic keratosis,1-benign-melanocytic nevus
+s-prd-693776049.jpg,benign,nevus,1-benign-melanocytic nevus,7-malignant-bcc,12-malignant-other
+s-prd-693776039.jpg,benign,nevus,1-benign-melanocytic nevus,7-malignant-bcc,12-malignant-other
+s-prd-664281603.jpg,malignant,bcc,9-malignant-sccis,2-benign-seborrheic keratosis,
+s-prd-664430400.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-664430742.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-664801117.jpg,benign,nevus,1-benign-melanocytic nevus,2-benign-seborrheic keratosis,1-benign-melanocytic nevus
+s-prd-664801752.jpg,benign,nevus,1-benign-melanocytic nevus,2-benign-seborrheic keratosis,1-benign-melanocytic nevus
+s-prd-664824630.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-664856603.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-664856854.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-666760115.jpg,malignant,scc,8-malignant-scc,9-malignant-sccis,2-benign-seborrheic keratosis
+s-prd-667118139.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,9-malignant-sccis,8-malignant-scc
+s-prd-762698122.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-667263187.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-670511050.jpg,malignant,bcc,7-malignant-bcc,8-malignant-scc,6-benign-other
+s-prd-670677660.jpg,benign,vasc,5-benign-hemangioma,7-malignant-bcc,8-malignant-scc
+s-prd-673789697.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-680815081.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-680815441.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-676962814.jpg,benign,nevus,1-benign-melanocytic nevus,6-benign-other,7-malignant-bcc
+s-prd-676964633.jpg,benign,nevus,1-benign-melanocytic nevus,6-benign-other,7-malignant-bcc
+s-prd-676916371.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-676916538.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-677395170.jpg,benign,seborrheic_keratosis,1-benign-melanocytic nevus,2-benign-seborrheic keratosis,
+s-prd-677395448.jpg,benign,seborrheic_keratosis,1-benign-melanocytic nevus,2-benign-seborrheic keratosis,
+s-prd-677880431.jpg,benign,nevus,1-benign-melanocytic nevus,6-benign-other,
+s-prd-679811880.jpg,malignant,scc,7-malignant-bcc,9-malignant-sccis,8-malignant-scc
+s-prd-680824197.jpg,benign,seborrheic_keratosis,9-malignant-sccis,8-malignant-scc,2-benign-seborrheic keratosis
+s-prd-680844151.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-680844803.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-680774375.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-681266035.jpg,benign,nevus,2-benign-seborrheic keratosis,1-benign-melanocytic nevus,1-benign-melanocytic nevus
+s-prd-683568628.jpg,malignant,melanoma,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-683609511.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-687079083.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-687080414.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-687092609.jpg,benign,df,1-benign-melanocytic nevus,14-other-non-neoplastic/inflammatory/infectious,
+s-prd-690339741.jpg,benign,nevus,2-benign-seborrheic keratosis,1-benign-melanocytic nevus,
+s-prd-690340288.jpg,benign,nevus,2-benign-seborrheic keratosis,1-benign-melanocytic nevus,
+s-prd-693357111.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-699590476.jpg,malignant,melanoma,11-malignant-melanoma,11-malignant-melanoma,1-benign-melanocytic nevus
+s-prd-704414008.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-704414306.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-704414606.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-707707588.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-715065772.jpg,benign,nevus,1-benign-melanocytic nevus,6-benign-other,11-malignant-melanoma
+s-prd-716255222.jpg,malignant,bcc,7-malignant-bcc,8-malignant-scc,6-benign-other
+s-prd-716259410.jpg,malignant,scc,8-malignant-scc,6-benign-other,14-other-non-neoplastic/inflammatory/infectious
+s-prd-716262700.jpg,malignant,bcc,7-malignant-bcc,8-malignant-scc,6-benign-other
+s-prd-716305675.jpg,malignant,scc,8-malignant-scc,,
+s-prd-808566368.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-719315498.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-725902948.jpg,benign,seborrheic_keratosis,7-malignant-bcc,8-malignant-scc,2-benign-seborrheic keratosis
+s-prd-725903164.jpg,benign,seborrheic_keratosis,7-malignant-bcc,8-malignant-scc,2-benign-seborrheic keratosis
+s-prd-728506326.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,9-malignant-sccis,8-malignant-scc
+s-prd-737991455.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-740267590.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-741472766.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-745166919.jpg,malignant,ak,2-benign-seborrheic keratosis,10-malignant-ak,9-malignant-sccis
+s-prd-745167410.jpg,malignant,ak,2-benign-seborrheic keratosis,10-malignant-ak,9-malignant-sccis
+s-prd-750171294.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,10-malignant-ak,
+s-prd-752588183.jpg,malignant,bcc,7-malignant-bcc,9-malignant-sccis,6-benign-other
+s-prd-756256453.jpg,benign,nevus,1-benign-melanocytic nevus,1-benign-melanocytic nevus,11-malignant-melanoma
+s-prd-758876505.jpg,malignant,bcc,7-malignant-bcc,,
+s-prd-758877207.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-759492364.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-759492814.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-759492543.jpg,benign,nevus,1-benign-melanocytic nevus,11-malignant-melanoma,
+s-prd-759513690.jpg,malignant,scc,7-malignant-bcc,8-malignant-scc,
+s-prd-759514477.jpg,malignant,scc,7-malignant-bcc,8-malignant-scc,
+s-prd-762051626.jpg,benign,nevus,1-benign-melanocytic nevus,8-malignant-scc,9-malignant-sccis
+s-prd-763760165.jpg,malignant,scc,10-malignant-ak,2-benign-seborrheic keratosis,9-malignant-sccis
+s-prd-763760359.jpg,malignant,scc,10-malignant-ak,2-benign-seborrheic keratosis,9-malignant-sccis
+s-prd-766393515.jpg,benign,nevus,1-benign-melanocytic nevus,4-benign-dermatofibroma,11-malignant-melanoma
+s-prd-770585540.jpg,malignant,scc,8-malignant-scc,9-malignant-sccis,10-malignant-ak
+s-prd-774860409.jpg,benign,df,4-benign-dermatofibroma,7-malignant-bcc,1-benign-melanocytic nevus
+s-prd-785675318.jpg,benign,seborrheic_keratosis,2-benign-seborrheic keratosis,9-malignant-sccis,8-malignant-scc

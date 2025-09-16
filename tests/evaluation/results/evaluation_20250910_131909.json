@@ -1,0 +1,124 @@
+{
+  "timestamp": "2025-09-10T13:23:19.883760",
+  "dataset_info": {
+    "total_images": 306,
+    "successful_predictions": 306,
+    "failed_predictions": 0
+  },
+  "binary_model": {
+    "accuracy": 0.9150326797385621,
+    "sensitivity": 0.7678571428571429,
+    "specificity": 1.0,
+    "confusion_matrix": [
+      [
+        194,
+        0
+      ],
+      [
+        26,
+        86
+      ]
+    ],
+    "classification_report": {
+      "benign": {
+        "precision": 0.8818181818181818,
+        "recall": 1.0,
+        "f1-score": 0.9371980676328503,
+        "support": 194.0
+      },
+      "malignant": {
+        "precision": 1.0,
+        "recall": 0.7678571428571429,
+        "f1-score": 0.8686868686868687,
+        "support": 112.0
+      },
+      "accuracy": 0.9150326797385621,
+      "macro avg": {
+        "precision": 0.9409090909090909,
+        "recall": 0.8839285714285714,
+        "f1-score": 0.9029424681598595,
+        "support": 306.0
+      },
+      "weighted avg": {
+        "precision": 0.9250742721330957,
+        "recall": 0.9150326797385621,
+        "f1-score": 0.9121220732473929,
+        "support": 306.0
+      }
+    }
+  },
+  "dx_model": {
+    "accuracy": 0.5163398692810458,
+    "total_samples": 306,
+    "valid_predictions": 306,
+    "classification_report": {
+      "ak": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 8.0
+      },
+      "bcc": {
+        "precision": 0.6521739130434783,
+        "recall": 0.3488372093023256,
+        "f1-score": 0.45454545454545453,
+        "support": 43.0
+      },
+      "df": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "lentigo": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "melanoma": {
+        "precision": 0.08333333333333333,
+        "recall": 0.09090909090909091,
+        "f1-score": 0.08695652173913043,
+        "support": 11.0
+      },
+      "nevus": {
+        "precision": 0.6,
+        "recall": 0.9130434782608695,
+        "f1-score": 0.7241379310344828,
+        "support": 138.0
+      },
+      "scc": {
+        "precision": 0.6666666666666666,
+        "recall": 0.24,
+        "f1-score": 0.35294117647058826,
+        "support": 50.0
+      },
+      "seborrheic_keratosis": {
+        "precision": 0.15384615384615385,
+        "recall": 0.08695652173913043,
+        "f1-score": 0.1111111111111111,
+        "support": 46.0
+      },
+      "vasc": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 4.0
+      },
+      "accuracy": 0.5163398692810458,
+      "macro avg": {
+        "precision": 0.23955778520995916,
+        "recall": 0.1866384778012685,
+        "f1-score": 0.19218802165564078,
+        "support": 306.0
+      },
+      "weighted avg": {
+        "precision": 0.49728889326076026,
+        "recall": 0.5163398692810458,
+        "f1-score": 0.4679450349738043,
+        "support": 306.0
+      }
+    }
+  }
+}

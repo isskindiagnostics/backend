@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-09-10T14:00:18.492940",
+  "dataset_info": {
+    "total_images": 306,
+    "total_analyses": 778,
+    "successful_isskin_predictions": 306,
+    "failed_isskin_predictions": 0,
+    "isskin_success_rate": 1.0
+  },
+  "binary_classification_comparison": {
+    "overall_comparison": {
+      "total_isskin_predictions": 778,
+      "total_doctor_predictions": 721,
+      "total_comparable_cases": 721,
+      "agreement_rate": 0.6338418862690708,
+      "disagreement_rate": 0.3661581137309292,
+      "cohen_kappa": 0.3003293536434747,
+      "isskin_accuracy": 0.9267352185089974,
+      "doctor_accuracy": 0.6976421636615812,
+      "accuracy_difference": 0.22909305484741627,
+      "agreements": 264,
+      "disagreements": 457
+    },
+    "summary": {
+      "total_analyses": 778,
+      "isskin_predictions": 778,
+      "doctor_predictions": 721,
+      "comparable_cases": 721,
+      "isskin_accuracy": 0.9267352185089974,
+      "doctors_accuracy": 0.6976421636615812,
+      "agreement_rate": 0.6338418862690708,
+      "cohen_kappa": 0.3003293536434747
+    }
+  },
+  "dx_classification_comparison": {
+    "overall_comparison": {
+      "total_isskin_predictions": 778,
+      "total_doctor_predictions": 721,
+      "total_comparable_cases": 721,
+      "agreement_rate": 0.37170596393897365,
+      "disagreement_rate": 0.6282940360610263,
+      "cohen_kappa": 0.13539777796013874,
+      "isskin_accuracy": 0.5244215938303342,
+      "doctor_accuracy": 0.507628294036061,
+      "accuracy_difference": 0.01679329979427313,
+      "agreements": 453,
+      "disagreements": 268
+    },
+    "summary": {
+      "total_analyses": 778,
+      "isskin_predictions": 778,
+      "doctor_predictions": 721,
+      "comparable_cases": 721,
+      "isskin_accuracy": 0.5244215938303342,
+      "doctors_accuracy": 0.507628294036061,
+      "agreement_rate": 0.37170596393897365,
+      "cohen_kappa": 0.13539777796013874
+    }
+  }
+}

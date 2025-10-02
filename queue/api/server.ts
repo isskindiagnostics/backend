@@ -16,7 +16,16 @@ const allowedMimeTypes = ['image/jpeg', 'image/png', 'image/jpg'];
 
 // Cria o servidor express e define a porta 3001.
 const app = express();
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(
+  cors({
+    origin: [
+      'http://localhost:3000',
+      'https://isskindiagnostics.com',
+      'https://uncategorical-nicki-turbidimetrically.ngrok-free.dev',
+    ],
+    credentials: true, // if you need to send cookies/auth
+  })
+);
 const PORT = 3001;
 
 // Cria a rota POST /analyze para receber uma imagem.
